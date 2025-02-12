@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.exceptions import HTTPException
 from fastapi.staticfiles import StaticFiles
-from .routes import pages, auth, listing
+from routes import pages, auth, listing
 
 
 
