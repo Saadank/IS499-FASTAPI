@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <ul>
+                    <li><a href="{{ url_for('auction') }}">Auction</a></li>
+                    <li><a href="{{ url_for('forsale') }}">For Sale</a></li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="{{ url_for('addlisting') }}">Add Listing</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
